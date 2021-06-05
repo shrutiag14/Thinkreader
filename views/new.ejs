@@ -1,0 +1,25 @@
+<%include partials/header%>
+<div class='ui main text container segment'>
+    <div class='ui huge header'>NEW BLOG</div>
+    <form  class='ui form' onsubmit="return validate()" action='/blogs' method='POST'>
+        
+        
+       <div class='field'>
+            <label>TITLE</label>
+            <input type='text' class="input" name='blog[title]' placeholder='title' required>
+            </div>
+      <div class='field'>
+            <label>IMAGE</label>
+            <input type='url' class="input" name='blog[image]' placeholder='imageurl' required>
+            </div>
+            <div class='field'>
+            <label>BLOG CONTENT</label>
+        <textarea id="mytextarea" name='blog[body]' rows="20" class="input" placeholder='blog post goes here' ></textarea> 
+        <p style="display:none;" id="body-warning">Please write body</p> 
+        </div>
+        <input class='ui black big button' type='submit'>
+    </form>
+
+</div>
+
+<%include partials/footer%>
